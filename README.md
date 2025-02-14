@@ -1,0 +1,3 @@
+# Scala Generic Method NullPointerException
+
+This example demonstrates a common error encountered when working with generic types and null values in Scala.  The `myMethod` attempts to compare a generic type `T` to `null`. This works fine for reference types but throws a `NullPointerException` if `T` is a primitive type like `Int`. The root cause is the lack of null-safety for primitive types.  The solution involves handling nulls more robustly, perhaps through Option or by ensuring nulls are never passed to the method.
